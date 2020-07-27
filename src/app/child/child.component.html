@@ -1,0 +1,20 @@
+<h5>
+  I am the ChildComponent. <br />
+  I am a manually created component
+</h5>
+<hr />
+<label>Server Name</label>
+<!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)" /> -->
+<input type="text" class="form-control" [(ngModel)]="serverName" />
+<!-- <p>{{ serverName }}</p> -->
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add server</button>
+<!-- <p>{{ serverCreationStatus }}</p> -->
+<!-- <p *ngIf="serverCreated; else noServer">Server was created, server name is {{ serverName }}</p> -->
+<!-- <p *ngIf="serverCreated; else noServer">{{ result }}</p> -->
+<ng-template #noServer>
+  <p>No server was created....</p>
+</ng-template>
+
+<app-second-child *ngFor="let server of servers"></app-second-child>
+
+<hr />

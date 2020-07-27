@@ -1,0 +1,11 @@
+<div class="row mt-5">
+  <div class="col-12 panel panel-default p-0">
+    <div class="panel-heading">{{ element.name }}</div>
+    <div class="panel-body">
+      <p>
+        <strong *ngIf="element.type === 'server'" [ngStyle]="{ color: 'red' }">{{ element.content }}</strong>
+        <em *ngIf="element.type === 'blueprint'" [ngStyle]="{ color: 'blue' }">{{ element.content }}</em>
+      </p>
+    </div>
+  </div>
+</div>

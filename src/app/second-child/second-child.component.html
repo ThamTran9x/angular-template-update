@@ -1,0 +1,18 @@
+<hr />
+<!-- <h2>Practicing two-way-binding</h2>
+<input type="text" [(ngModel)]="username" class="form-control" />
+
+<p>{{ username }}</p>
+
+<button class="btn btn-primary" [disabled]="username === ''" (click)="username = ''">Reset Input</button>
+
+<hr /> -->
+
+<p [ngStyle]="{ backgroundColor: getColor() }" [ngClass]="{ online: serverStatus === 'online' }">
+  Server is with ID {{ serverId }} is {{ serverStatus }}
+</p>
+<!--
+<h2 [ngStyle]="{ 'background-color': 'yellow' }">
+  Test with directive ngClass with structure 'background-color': 'yellow'
+</h2>
+<h2 [ngStyle]="{ backgroundColor: 'yellow' }">Test with directive ngClass with structure backgroundColor' 'yellow'</h2> -->
