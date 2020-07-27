@@ -15,6 +15,7 @@ import { EvenComponent } from './assignment4/even/even.component';
 import { BasicHighlightDirective } from './assignment4/basic-highlight/basic-highlight.directive';
 import { BetterHighlightDirective } from './assignment4/better-highlight/better-highlighht.directive';
 import { UnlessDirective } from './unless.directive';
+import { AssigmentFormsComponent } from './assigment-forms/assigment-forms.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { UnlessDirective } from './unless.directive';
     BasicHighlightDirective,
     BetterHighlightDirective,
     UnlessDirective,
+    AssigmentFormsComponent,
   ],
   imports: [
     BrowserModule,
