@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ChildComponent } from './child/child.component';
 import { SecondChildComponent } from './second-child/second-child.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AssignmentsComponent } from './assignments/assignments.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
@@ -16,6 +16,7 @@ import { BasicHighlightDirective } from './assignment4/basic-highlight/basic-hig
 import { BetterHighlightDirective } from './assignment4/better-highlight/better-highlighht.directive';
 import { UnlessDirective } from './unless.directive';
 import { AssigmentFormsComponent } from './assigment-forms/assigment-forms.component';
+import { AssignmentReactiveFormsComponent } from './assignment-reactive-forms/assignment-reactive-forms.component';
 
 @NgModule({
   declarations: [
@@ -32,10 +33,12 @@ import { AssigmentFormsComponent } from './assigment-forms/assigment-forms.compo
     BetterHighlightDirective,
     UnlessDirective,
     AssigmentFormsComponent,
+    AssignmentReactiveFormsComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     NgbModule,
   ],
   providers: [],

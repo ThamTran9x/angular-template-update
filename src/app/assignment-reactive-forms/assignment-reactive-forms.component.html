@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-5 col-sm-offset-1 col-md-offset-2">
+      <h3>Assignment for Reactive Forms</h3>
+      <!--
+          Create a Form with the following Controls and Validators
+          1) Project Name (should not be empty)
+          2) Mail (should not be a empty and a valid email)
+          3) Project Status Dropdown, with three values: 'Stable', 'Critical', 'Finished'
+          4) Submit Button
+
+          Add your own Validator which doesn't allow "Test" as a Project Name
+
+          Also implement that Validator as an async Validator (replace the other one)
+
+          Upon submitting the form, simply print the value to the console
+      -->
+      <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="">Project Name</label>
+          <input formControlName="name" type="text" class="form-control" />
+          <span class="help-block" *ngIf="!signUpForm.get('name').valid && signUpForm.get('name').touched">
+
+            <span *ngIf="signUpForm.get('name').hasError('isForbiddenName')">Invalid name!</span>
+            <span *ngIf="signUpForm.get('name').hasError('required')">Please insert value!</span>
+          </span>
+        </div>
+        <div class="form-group">
+          <label for="">Mail</label>
+          <input formControlName="mail" type="text" class="form-control" />
+          <span class="help-block" *ngIf="!signUpForm.get('mail').valid && signUpForm.get('mail').touched">
+            <span>Please insert valid email!</span>
+          </span>
+        </div>
+        <div class="form-group">
+          <label for="">Project Status</label>
+          <select class="form-control" formControlName="status">
+            <option value="{{ status }}" *ngFor="let status of projectStatus">{{ status }}</option>
+          </select>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </form>
+      <br />
+    </div>
+  </div>
+</div>
